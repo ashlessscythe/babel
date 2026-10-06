@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://libraryofbabel.app</loc>
+        <loc>/</loc>
     </url>
     <url>
-        <loc>https://libraryofbabel.app/browse</loc>
+        <loc>/browse</loc>
     </url>
     <url>
-        <loc>https://libraryofbabel.app/search</loc>
+        <loc>/search</loc>
     </url>
     <url>
-        <loc>https://libraryofbabel.app/about</loc>
+        <loc>/about</loc>
     </url>
     <url>
-        <loc>https://libraryofbabel.app/the-library-of-babel</loc>
+        <loc>/the-library-of-babel</loc>
     </url>
 </urlset>

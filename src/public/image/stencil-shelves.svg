@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" fill="none" aria-hidden="true">
+  <!-- Stencil: standing figure beside tall shelves -->
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    d="M64 28c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18z"/>
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    d="M46 68h36l8 52H38l8-52z"/>
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    d="M64 64v6M48 120v12M80 120v12"/>
+  <path stroke="currentColor" stroke-width="2"
+    d="M120 16h180v108H120z"/>
+  <path stroke="currentColor" stroke-width="1.5"
+    d="M120 40h180M120 64h180M120 88h180M120 112h180"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M136 40v-10M152 40v-16M168 40v-8M184 40v-14M200 40v-9M216 40v-15M232 40v-7M248 40v-12M264 40v-11M280 40v-13"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M136 64v-12M152 64v-8M168 64v-15M184 64v-9M200 64v-14M216 64v-7M232 64v-11M248 64v-13M264 64v-8M280 64v-10"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M136 88v-11M152 88v-14M168 88v-7M184 88v-12M200 88v-9M216 88v-15M232 88v-8M248 88v-10M264 88v-13M280 88v-6"/>
+</svg>

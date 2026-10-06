@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="none" aria-hidden="true">
+  <!-- Stencil: seated reader with open book -->
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    d="M120 42c-18 0-32 14-32 32 0 12 6 22 16 28v10h32v-10c10-6 16-16 16-28 0-18-14-32-32-32z"/>
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    d="M88 112h64c14 0 26 12 26 26v78H62v-78c0-14 12-26 26-26z"/>
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    d="M120 138v78M78 168h28M134 168h28M78 188h28M134 188h28"/>
+  <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    d="M52 248h136M68 248v20M172 248v20"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.55"
+    d="M40 36h24M176 48h28M28 200h18M198 180h22"/>
+</svg>

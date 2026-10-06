@@ -25,7 +25,7 @@ export async function generatePdf(
 
     let top = TOP;
 
-    docPage.drawText("https://libraryofbabel.app/", {
+    docPage.drawText("THE LIBRARY", {
       x: MARGIN,
       y: top,
       size: FONT_SIZE,

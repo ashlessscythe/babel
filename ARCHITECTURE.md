@@ -242,16 +242,41 @@ Status indicators should distinguish: online / offline / cached assets / local c
 
 ## 9. Implementation order (confirmed)
 
-1. Audit docs ← **this phase**
-2. Mathematical core + tests (compatibility with `numbers`)
-3. Runtime / API
-4. Client shell
-5. Reader / explorer / movement
-6. My Library (IndexedDB)
-7. PWA + offline engine
-8. Security
-9. Admin
-10. Deploy bake-off (Koyeb vs Cloudflare)
-11. Visual polish last
+1. Audit docs ← done
+2. Mathematical core + tests (compatibility with `numbers`) ← in progress / BigInt core landed
+3. **Interim UI differentiation (Pug/CSS)** ← active  
+   Do **not** ship a cosmetic clone of the upstream floralwhite/Lora site. Even before the React rewrite, the live SSR surface must read as **The Library**: black/white, terminal + manuscript, search-first home, no `libraryofbabel.app` branding, no upstream analytics/donate chrome. Full React client still replaces this later.
+4. Runtime / API
+5. **Client shell (React rewrite — Phase 4)**  
+   - Vite + React + TypeScript  
+   - **Adopt [shadcn/ui](https://ui.shadcn.com/)** as the component primitive layer (Radix + Tailwind), restyled to The Library’s B&W / mono / manuscript tokens — not default shadcn “SaaS purple.”  
+   - Prefer composing few primitives (Button, Input, Dialog, Tabs) over a large component grab-bag.  
+   - Theme tokens must continue to support light/dark via the same mental model as interim `data-theme`.
+6. Reader / explorer / movement
+7. My Library (IndexedDB)
+8. PWA + offline engine
+9. Security
+10. Admin
+11. Deploy bake-off (Koyeb vs Cloudflare)
+12. Final visual polish (illustrations, motion, empty/error states) — after functionality
 
-Next concrete work after these docs: Phase 2 — extract `core/` behind a `BigInt` backend, fixture tests against known identifiers from the current engine.
+### Interim UI acceptance (Phase 3a)
+
+- [x] Remove `libraryofbabel.app` URLs from product UI, SEO, PDF, sitemap, README
+- [x] Brand as **The Library**; credit upstream only as GPL derivative
+- [x] Dark high-contrast B&W system (not floralwhite SaaS/essay layout)
+- [x] Minimal homepage: brand, one lead line, search, few actions
+- [x] Light/dark theme toggle (sun/moon), persisted locally
+- [x] Stencil / silhouette SVG art (not photographic Mucha clones)
+- [x] Google Analytics removed from head
+- [ ] React + **shadcn/ui** client (Phase 4) — scheduled, not started
+
+---
+
+## 10. Branding & prior-art references
+
+| Allowed | Not allowed in product chrome |
+| --- | --- |
+| Credit Tom Snelling / `tdjsnelling/babel` (GPL) | Presenting this deploy as libraryofbabel.app |
+| Cite Borges; link Wikipedia / local Borges PDF | Upstream donate / contact email as *this* project’s support |
+| Mention libraryofbabel.info as prior art | Copying upstream visual identity (cream page, darkred initials, same home essay layout) |

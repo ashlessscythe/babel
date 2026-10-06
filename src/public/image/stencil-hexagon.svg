@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" fill="none" aria-hidden="true">
+  <!-- Stencil: hexagonal room with shelves -->
+  <path stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+    d="M80 20h160l60 52-60 52H80L20 72z"/>
+  <path stroke="currentColor" stroke-width="1.5" opacity="0.7"
+    d="M80 20v104M240 20v104M50 46h220M35 72h250M50 98h220"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M96 46v-8M112 46v-12M128 46v-6M144 46v-14M160 46v-8M176 46v-11M192 46v-7M208 46v-13"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M96 72v-10M112 72v-14M128 72v-8M144 72v-12M160 72v-9M176 72v-15M192 72v-7M208 72v-11"/>
+  <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    d="M96 98v-9M112 98v-13M128 98v-7M144 98v-14M160 98v-8M176 98v-12M192 98v-6M208 98v-11"/>
+  <circle cx="160" cy="72" r="6" stroke="currentColor" stroke-width="1.5"/>
+</svg>

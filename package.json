@@ -2,8 +2,11 @@
   "name": "babel",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "repository": "https://github.com/tdjsnelling/babel",
+  "repository": "https://github.com/ashlessscythe/babel",
   "author": "Tom Snelling <tomsnelling8@gmail.com>",
+  "contributors": [
+    "ashlessscythe (derivative / The Library)"
+  ],
   "license": "GPL-3.0",
   "private": false,
   "scripts": {

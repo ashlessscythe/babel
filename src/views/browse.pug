@@ -1,18 +1,20 @@
 doctype html
 html(lang="en")
     include includes/head.pug
-    +seo("Browse the Library", "Navigate to a specific room, wall, shelf, book and page of the Library.")
+    +seo("Explore the Library", "Enter coordinates. Walk to a room, wall, shelf, book, and page.")
 
     body
         include includes/nav.pug
 
         main
-            img.Banner(src="/image/shelves.png", alt="A pencil drawing of a man in a hooded robe standing next to large shelves of books")
+            img.CharcoalArt.CharcoalArt--banner(src="/image/art/explore-shelves.jpg", alt="Charcoal silhouette of a figure beside endless shelves")
+
+            h2(style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 400;") Enter the coordinates
 
             form#browse.BrowseForm
                 label
                     p Room
-                    textarea(name="room", rows=2, required=true, placeholder="Enter an alphanumeric room identifier made up of the characters 0-9 and a-v.")
+                    textarea(name="room", rows=2, required=true, placeholder="Base-32 room id: 0-9 and a-v")
 
                 div.Numbers
                     label
@@ -50,13 +52,13 @@ html(lang="en")
 
             form#bookmark.BrowseForm
                 label
-                    p Upload a bookmark file
+                    p Open a bookmark file
                         |
                         |
-                        span You can download these when viewing a page
+                        span .babel from a page you saved
                     input(type="file", name="bookmark", accept=".babel", multiple=false, required=true)
 
-                Button Go
+                button Go
 
         include includes/footer.pug
 

@@ -1,6 +1,8 @@
-# babel
+# The Library
 
-A functional, complete, true-to-scale re-creation of the [Library of Babel](https://en.wikipedia.org/wiki/The_Library_of_Babel) [[.pdf](https://libraryofbabel.app/pdf/Borges-The-Library-of-Babel.pdf)].
+A modified derivative of [tdjsnelling/babel](https://github.com/tdjsnelling/babel) (GPL-3.0) — a complete, true-to-scale re-creation of Borges’ [Library of Babel](https://en.wikipedia.org/wiki/The_Library_of_Babel). Working title: **The Library**.
+
+See `NOTICE`, `LICENSE`, and `LICENSE_NOTES.md`. Architecture and mathematics notes live in `ARCHITECTURE.md` and `MATHEMATICS.md`.
 
 ### What is it?
 
@@ -18,27 +20,26 @@ This is an explorable representation of the complete library, written in TypeScr
 
 ### How do I use it?
 
-You can browse the library at [libraryofbabel.app](https://libraryofbabel.app).
-
-Alternatively, you can clone this repo and run it yourself. To build and start on `http://localhost:3000`:
+Clone this repo and run it locally:
 
 ```
-$ yarn install
-$ yarn build
-$ yarn start
+$ npm install
+$ npm run build
+$ npm run start
 ```
 
-You can then look up a page at the `/ref/...` endpoint, e.g. `/ref/1.1.1.1.1`.
+Open `http://localhost:3000`.
 
-You can search for a page containing some content at `/search`, navigate to a specific page at `/browse`, and you can visit a random page at `/random`.
+- Page: `/ref/1.1.1.1.1`
+- Search: `/search`
+- Explore: `/browse`
+- Random: `/random`
 
 ### How does it work?
 
-The contents of each book is intrinsically linked to it’s index in the library. Books are not generated and stored as you search for them, as the storage requirements would be beyond possibility. Instead, the book index is run through an algorithm that produces the contents of the book. This algorithm is reversible, so we can give it the contents of a book and determine the index of the book it appears in.
+The contents of each book is intrinsically linked to its index in the library. Books are not generated and stored as you search for them, as the storage requirements would be beyond possibility. Instead, the book index is run through an algorithm that produces the contents of the book. The algorithm is reversible, so content can be turned back into a coordinate.
 
-Each book will contain the same contents forever. There is no trickery going on to simply show you a made-up book containing the text that you search for.
-
-You can read more on the [home](https://libraryofbabel.app) and [about](https://libraryofbabel.app/about) pages.
+Each book will contain the same contents forever. Finding a sentence means a book containing it exists at that coordinate — not that the surrounding pages are meaningful.
 
 #### Detailed explanation
 

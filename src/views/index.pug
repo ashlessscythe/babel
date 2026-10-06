@@ -1,78 +1,30 @@
 doctype html
 html(lang="en")
     include includes/head.pug
-    +seo()
+    +seo("The Library", "Every possible book exists here. Search the Library.")
 
     body
         include includes/nav.pug
 
-        main.BodyStyle
-            img.Librarian(src="/image/librarian-5.png", alt="A bearded man in a hooded robe sat studying a book in the style of the artist Alphonse Mucha")
+        main.Home
+            h1.HomeBrand The Library
 
-            p.initial
-                span The
-                |
-                |
-                a(href="/the-library-of-babel") Library of Babel
-                |
-                | (
-                a(href="/pdf/Borges-The-Library-of-Babel.pdf", target="_blank") pdf
-                | ) is a short story by
-                |
-                a(href="https://en.wikipedia.org/wiki/Jorge_Luis_Borges", target="_blank") Jorge Luis Borges
-                |
-                | first published in 1941.
+            p.HomeLead Every possible book exists here.
 
-            p It describes a library made up of an “indefinite, perhaps infinite” number hexagonal of rooms, each lined on four sides by a bookshelf of five shelves, each self containing thirty-two books. Each book is four hundred and ten pages of forty lines, each line of eighty characters.
-            p In the story, each book is made up of “twenty-five orthographic symbols” consisting of twenty-two lowercase letters, the comma, the full-stop, and the space. This website expands that to thirty-two symbols: the twenty-six lower-case letters of the English alphabet, the comma, full-stop, exclamation mark, question mark, hyphen, and space.
-            p In its pages, the library contains every possible combination of these characters. No two books are the same — meaning that the library is “total — perfect, complete, and whole”. Everything that ever has been, or ever will be written using these thirty-two characters is contained somewhere within the library.
+            form.HomeSearch.SearchForm
+                label(for="content") Search the Library
+                textarea#content(name="content", rows=3, required=true, placeholder="Enter a sentence, a name, a date…", autofocus=true)
+                input(type="hidden", name="mode", value="empty")
+                button(type="submit") Search
 
-            p This is a re-creation of the library, explorable from your web browser. It is the only
-                |
-                |
-                em complete
-                |
-                | re-creation of the Library of Babel, in that it contains every single unique book — not just every unique page.
+            nav.HomeActions(aria-label="Primary actions")
+                a(href="/random") Random Page
+                a(href="/browse") Explore
+                a(href="/about") About
 
-            p You can get started by browsing the library from
-                |
-                |
-                a(href="/ref/1.1.1.1.1") the beginning
-                |, from a
-                |
-                a(href="/random") random page
-                |, or by
-                |
-                a(href="/search") searching for some text
-                |.
-
-            p So far,
-                |
-                |
-                strong #{bookmarkCount.toLocaleString()} unique rooms
-                |
-                | have been visited out of roughly
-                |
-                |
-                span.nobreak 10
-                    span.super 197,473
-                |
-                | total rooms.
-
-            p Try searching for your name, your date of birth, or maybe a line from your favourite song or poem. Search for a paragraph from a book, perhaps a book that is yet to be written.
-
-            p Please see the
-                |
-                |
-                a(href="/about") about page
-                |
-                | and the
-                |
-                a(href="https://github.com/tdjsnelling/babel", target="_blank") GitHub repository
-                |
-                | for a more technical explanation of how this site works and to view the source code. For any feedback, please get in touch via the GitHub repo or at
-                |
-                a(href="mailto:babel@tdjs.dev", target="_blank") babel@tdjs.dev
-                |.
+            if bookmarkCount
+                p.HomeMeta #{bookmarkCount.toLocaleString()} rooms remembered
 
         include includes/footer.pug
+
+    script(src="/js/handleSearchForm.js", type="text/javascript")
