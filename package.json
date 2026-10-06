@@ -11,13 +11,16 @@
     "dev": "concurrently --passthrough-arguments --kill-others \"yarn build --watch\" \"nodemon --enable-source-maps dist/src/index.js {1}\"",
     "start": "node dist/src/index.js",
     "migrate:s3": "node dist/src/tools/leveldb-to-s3.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:heavy": "tsx scripts/run-heavy-math.ts"
   },
   "devDependencies": {
     "@types/koa": "^2.14.0",
+    "@types/koa__router": "^12.0.4",
     "@types/koa-bodyparser": "^4.3.12",
     "@types/koa-static": "^4.0.4",
-    "@types/koa__router": "^12.0.4",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "concurrently": "^8.2.2",
@@ -26,7 +29,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
-    "typescript": "^5.3.3"
+    "tsx": "^4.23.15",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.8"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.812.0",
